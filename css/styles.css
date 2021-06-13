@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  color: inherit;
+  background-color: #d1ece6;
+
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px SlateGrey;
+}
+
+.page-header {
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid Black;
+  text-align: center;
+  color: inherit;
+  background-color: #d1ece6;
+  background-image: url("../imgs/dataDex-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
