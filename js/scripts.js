@@ -39,11 +39,10 @@ console.log(pokemonRepository.getAll());
 //Function to validate and write data to DOM
 pokemonRepository.getAll().forEach(function(list) {
     //Prints pokemon data to DOM
-    document.write("<p>" + list.name + " (height :" + list.height + ")" + "</p>");
+    document.write('<p>' + list.name + " (height :" + list.height + ")");
     //Checks if pokemon height is greater than 6
     if (list.height > 6) {
-      document.write("<p> -Wow, that's big! </p>");
-    }
+      document.write(" - Wow, that's big!"); }
     //Prints the array to the console for validation
     console.log(list.name);
 });
