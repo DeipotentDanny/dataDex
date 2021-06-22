@@ -41,13 +41,9 @@ h1 {
   display: none;
 }
 
-ul {
-  list-style-type: none;
-}
-
 button,
 .button-class {
-  width: 98%;
+  width: 100%;
   border: none;
   display: inline;
   color: inherit;
@@ -75,4 +71,9 @@ button:focus,
 
 .pokedex-menu {
   display: block;
+}
+
+.pokemon-list {
+  list-style-type: none;
+  padding-right: 40px;
 }
