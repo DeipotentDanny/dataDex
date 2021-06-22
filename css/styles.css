@@ -7,9 +7,12 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
-  color: inherit;
-  background-color: #d1ece6;
-
+  color: Black;
+  background-color: inherit;
+  background-image: url("../imgs/data-dexBG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 
 h1 {
@@ -22,12 +25,54 @@ h1 {
 .page-header {
   width: 100%;
   padding: 5px;
-  border-bottom: 1px solid Black;
+  border-bottom: 2px solid Black;
+  border-radius: 10px;
   text-align: center;
   color: inherit;
-  background-color: #d1ece6;
-  background-image: url("../imgs/dataDex-bg.jpg");
+  background-color: inherit;
+  background-image: url("../imgs/pokedex-headerBG.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* For hidden pokemon details */
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button,
+.button-class {
+  width: 98%;
+  border: none;
+  display: inline;
+  color: inherit;
+  background-color: LightGrey;
+  font-family: inherit;
+  padding: 10px;
+  margin: 5px auto;
+  border: solid 2px black;
+  /* border-radius: 10px; */
+  /* border-bottom: 2px solid rgba(0, 0, 0, 0.3); */
+  /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3); */
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: none;
+  text-decoration: none;
+  list-style-type: none;
+  transition: 0.2s opacity;
+}
+
+.pokedex-menu {
+  display: block;
 }
