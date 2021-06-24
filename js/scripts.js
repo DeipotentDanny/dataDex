@@ -83,7 +83,6 @@ const pokemonRepository = (function () {
     add: add,
     getAll: getAll,
     addListItem: addListItem,
-    showDetails: showDetails,
     loadList: loadList,
     loadDetails: loadDetails
   };
@@ -98,10 +97,5 @@ pokemonRepository.loadList().then(function() {
 });
 
 //validation of IIFE and code functionality
-pokemonRepository.add({ height: '32' }); //should return Pokemon input incorrect in console
-console.log(pokemonRepository.getAll());
-
-//Function to validate and write data to DOM
-pokemonRepository.getAll().forEach(function(pokemon) {
-  pokemonRepository.addListItem(pokemon); //calling pokeList from function
-});
+// pokemonRepository.add({ height: '32' }); //should return Pokemon input incorrect in console
+// console.log(pokemonRepository.getAll());
