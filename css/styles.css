@@ -11,12 +11,12 @@ body {
   background-color: inherit;
   background-image: url("../imgs/data-dexBG.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  background-size: contain;
+  background-position: center 1%;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   text-align: center;
   text-shadow: 2px 2px SlateGrey;
@@ -25,7 +25,7 @@ h1 {
 .page-header {
   width: 100%;
   padding: 5px;
-  border-bottom: 2px solid Black;
+  border: 2px solid Black;
   border-radius: 10px;
   text-align: center;
   color: inherit;
