@@ -29,16 +29,16 @@ const pokemonRepository = (function () {
     let listPokemon = document.createElement('li');
     listPokemon.classList.add('group-list-item');
     //adding img to list items
-    let pokemonImg = document.createElement('img');
-    pokemonImg.classList.add('list-img');
+    // let pokemonImg = document.createElement('img');
+    // pokemonImg.classList.add('list-img');
     //Adding button to each pokemon
     let button = document.createElement('button');
-    pokemonImg.src = ""
+    // pokemonImg.src = ""
     button.innerText = pokemon.name; //accesses the name from pokemonRepository
     button.classList.add('btn', 'btn-block') //adds class for manipulation in css
     //event listener
     button.setAttribute('data-target', '#pokemonModal', 'data-toggle', 'modal');
-    listPokemon.appendChild(pokemonImg);
+    // listPokemon.appendChild(pokemonImg);
     listPokemon.appendChild(button);
     pokeList.appendChild(listPokemon);
 
@@ -122,11 +122,11 @@ const pokemonRepository = (function () {
     let pokemonHeight = $('<p>' + 'Height: ' + item.height + 'm' + '</p>');
 
     //pokemon image front
-    let pokemonImageFront = $('<img class="modal-img" style="width:20%">');
+    let pokemonImageFront = $('<img class="modal-img" style="width:20%" alt="Sprite Front">');
     pokemonImageFront.attr('src', item.imageUrl);
 
     //pokemon image back
-    let pokemonImageBack = $('<img class="modal-img" style="width:20%">');
+    let pokemonImageBack = $('<img class="modal-img" style="width:20%" alt="Sprite Back">');
     pokemonImageBack.attr('src', item.imageUrlBack);
 
     //append all elements created to the modal
