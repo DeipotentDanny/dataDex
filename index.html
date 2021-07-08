@@ -18,11 +18,12 @@
   <body>
     <!-- Navbar section -->
     <nav class="navbar">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand navbar_item" href="index.html">
         <img src="imgs/dataDex-logo.png" alt="DataDex logo" class="logo-image">
       </a>
+      <h1 id="navbar-title" class="navbar_item">Welcome Trainer!</h1>
       <!-- Search Bar will be completed at a later time -->
-      <form class="form-inline">
+      <form class="form-inline navbar_item">
           <input placeholder="Search Pokemon" onkeyup="searchFunction()" size="22" class="form-control" id="searchBar" type="search" value="" aria-label="search">
           <button class="btn" type="submit" onclick="findPokemon()">Search</button>
       </form>
@@ -69,6 +70,9 @@
 
     <!-- JS -->
     <script src="js/scripts.js"></script>
+
+    <!-- Accessibility Check -->
+    <script src="js/tota11y.min.js"></script>
   </body>
 
 </html>
