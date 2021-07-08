@@ -26,8 +26,8 @@ h1 {
 
 /* #container Layout */
 #container {
-  padding-left: 200px;   /* LC width */
-  padding-right: 200px;  /* RC width */
+  padding-left: 100px;   /* LC width */
+  padding-right: 100px;  /* RC width */
   background-image: url("../imgs/column-background.jpg")
 }
 #container .column {
@@ -36,23 +36,24 @@ h1 {
 }
 #center {
   width: 100%;
-  background: #ff9797;
-  min-width: 300px;
+  background: #a56262;
+  min-width: 200px;
   border-left: 2px solid Black;
   border-right: 2px solid Black;
 }
 #left {
-  width: 200px;          /* LC width */
-  right: 200px;          /* LC width */
+  width: 100px;          /* LC width */
+  right: 100px;          /* LC width */
   margin-left: -100%;
 }
 #right {
-  width: 200px;          /* RC width */
-  margin-right: -200px;  /* RC width */
+  width: 100px;          /* RC width */
+  margin-right: -100px;  /* RC width */
 }
 
 /* Navbar Items */
 .navbar {
+  display: flex;
   padding: 40px 16px;
   width: 100%;
   color: inherit;
@@ -65,6 +66,10 @@ h1 {
   border-radius: 10px;
 }
 
+.navbar_item {
+  flex: 0 1 300px;
+}
+
 .navbar-brand {
   font-size: 40px;
   color: Yellow;
@@ -73,6 +78,11 @@ h1 {
 
 .logo-image {
   width: 75%;
+}
+
+#navbar-title {
+  color: #767676;
+  font-size: 40px;
 }
 
 /* Search Bar */
@@ -85,6 +95,8 @@ h1 {
 /* Pokemon List Items */
 .list-group {
   list-style-type: none;
+  margin: auto;
+  padding: 4px;
 }
 
 .list-group-item {
@@ -93,7 +105,7 @@ h1 {
 button.btn.btn-block {
   font-size: 18px;
   font-weight: bold;
-  padding: 2px 4px;
+  padding: 4px;
   width: 40%;
   display: flex;
   justify-content: center;
@@ -106,7 +118,7 @@ button.btn.btn-block {
   background-position: center;
   border: 2px solid Black;
   border-radius: 10px;
-  margin: auto;
+  margin: 10px auto;
 }
 
 button.btn.btn-block:hover {
@@ -147,3 +159,27 @@ button.btn.btn-block:hover {
   text-shadow: 2px 0 0 Black, -2px 0 0 Black, 0 2px 0 Black, 0 -2px 0 Black, 1px 1px Black, -1px -1px 0 Black, 1px -1px 0 Black, -1px 1px 0 Black;
   border-radius: 15px;
 }
+
+/* Device Support */
+@media all and (max-width: 960px) {
+  .logo-image {
+    width: 75%
+  }
+
+  #navbar-title{
+    font-size: 25px;
+  }
+
+  .navbar_item {
+    flex: 0 1 150px;
+  }
+
+  #searchBar {
+    width: 75px;
+  }
+
+}
+
+/* @media all and (min-width: 500px) and (max-width: 960px) {
+
+} */
