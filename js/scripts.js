@@ -103,16 +103,11 @@ const pokemonRepository = (function () {
     pokemonRepository.loadDetails(item).then(function() {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
-    let modalHeader = $(".modal-header");
 
     //clear all modal content
     modalBody.empty();
     modalTitle.empty();
 
-    //Pokemon name
-    let nameElement = $('<h2>' + item.name + '</h2>');
-
-    //pokemon types
     let pokemonTypes = $('<p>' + 'Types: ' + item.types + '</p>');
 
     //pokemon abilities
@@ -130,7 +125,7 @@ const pokemonRepository = (function () {
     pokemonImageBack.attr('src', item.imageUrlBack);
 
     //append all elements created to the modal
-    modalTitle.append(nameElement);
+    modalTitle.append(item.name);
     modalBody.append(pokemonTypes);
     modalBody.append(pokemonAbilities);
     modalBody.append(pokemonHeight);
