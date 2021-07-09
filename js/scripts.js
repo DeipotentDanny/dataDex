@@ -110,7 +110,7 @@ const pokemonRepository = (function () {
     modalTitle.empty();
 
     //Pokemon name
-    let nameElement = $('<h1>' + item.name + '</h1>');
+    let nameElement = $('<h2>' + item.name + '</h2>');
 
     //pokemon types
     let pokemonTypes = $('<p>' + 'Types: ' + item.types + '</p>');
