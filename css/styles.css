@@ -103,9 +103,9 @@ h1 {
 }
 
 button.btn.btn-block {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
-  padding: 4px;
+  padding: 20px;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -118,7 +118,7 @@ button.btn.btn-block {
   background-position: center;
   border: 2px solid Black;
   border-radius: 10px;
-  margin: 10px auto;
+  margin: 20px auto;
 }
 
 button.btn.btn-block:hover {
@@ -167,7 +167,7 @@ button.btn.btn-block:hover {
   }
 
   #navbar-title{
-    font-size: 25px;
+    font-size: 35px;
   }
 
   .navbar_item {
