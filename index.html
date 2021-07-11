@@ -7,14 +7,11 @@
     <link rel="shortcut icon" href="imgs/bulbasaur-favicon.ico">
     <!-- Bootstrap Link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Normalize -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
     <!-- Custom Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="dist/styles.min.css" rel="stylesheet" type="text/css">
   </head>
-
   <body>
     <!-- Navbar section -->
     <nav class="navbar">
@@ -22,18 +19,15 @@
         <img src="imgs/dataDex-logo.png" alt="DataDex logo" class="logo-image">
       </a>
       <h1 id="navbar-title" class="navbar_item">Welcome Trainer!</h1>
-      <!-- Search Bar will be completed at a later time -->
-      <form class="form-inline navbar_item">
-          <input placeholder="Search Pokemon" onkeyup="searchFunction()" size="22" class="form-control" id="searchBar" type="search" value="" aria-label="search">
-          <button class="btn" type="submit" onclick="findPokemon()">Search</button>
-      </form>
-    </nav>
 
+      <!-- Search Bar -->
+      <label for="searchBar" class="hidden">Search Pokémon by name</label>
+					<input type="text" class="form-control form-inline navbar_item" id="searchBar" placeholder="Search Pokemon"/>
+    </nav>
     <div id="container">
       <div id="center" class="column">
         <!-- list of pokemon -->
         <ul class="list-group"></ul>
-
         <!-- Modal -->
         <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
@@ -47,10 +41,6 @@
               <div class="modal-body">
                 ...
               </div>
-              <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div> -->
             </div>
           </div>
         </div>
@@ -58,21 +48,14 @@
       <div id="left" class="column"></div>
       <div id="right" class="column"></div>
     </div>
-
     <!-- jQuery, Popper.js, and Bootstrap.js -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
     <!-- Polyfills -->
-    <script src="js/promise-polyfill.js"></script>
-    <script src="js/fetch-polyfill.js"></script>
-
+    <script src="dist/promise-polyfill.js"></script>
+    <script src="dist/fetch-polyfill.js"></script>
     <!-- JS -->
-    <script src="js/scripts.js"></script>
-
-    <!-- Accessibility Check -->
-    <script src="js/tota11y.min.js"></script>
+    <script src="dist/scripts.min.js"></script>
   </body>
-
 </html>
