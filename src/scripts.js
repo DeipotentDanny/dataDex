@@ -3,7 +3,7 @@ const pokemonRepository = (function () {
   //main array
   const pokemonList = [];
   //searchBar
-  let searchBar = document.querySelector('#searchBar');
+  const searchBar = document.querySelector('#searchBar');
   //apiUrl for fetching pokemonList
   const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
@@ -26,11 +26,11 @@ const pokemonRepository = (function () {
 
   function addListItem(pokemon) {
     //DOM manipulation of pokemonList
-    let pokeList = document.querySelector('.list-group');
+    const pokeList = document.querySelector('.list-group');
     //creating list elements
-    let listPokemon = document.createElement('li');
+    const listPokemon = document.createElement('li');
     listPokemon.classList.add('group-list-item');
-    let button = document.createElement('button');
+    const button = document.createElement('button');
     button.innerText = pokemon.name; //accesses the name from pokemonRepository
     button.classList.add('btn', 'btn-block') //adds class for manipulation in css
     //event listener
@@ -50,8 +50,8 @@ const pokemonRepository = (function () {
     }).then(function (json) {
       json.results.forEach(function (item) {
         //To capitalize the List names
-        let listNameCaps = item.name.charAt(0).toUpperCase() + item.name.slice(1);
-        let pokemon = {
+        const listNameCaps = item.name.charAt(0).toUpperCase() + item.name.slice(1);
+        const pokemon = {
           name: listNameCaps,
           detailsUrl: item.url
         };
@@ -64,7 +64,7 @@ const pokemonRepository = (function () {
 
   //fetching pokemon details from apiUrl
   function loadDetails(item) {
-    let url = item.detailsUrl;
+    const url = item.detailsUrl;
     return fetch(url).then(function (response) {
       return response.json();
     }).then(function (details) {
@@ -97,27 +97,27 @@ const pokemonRepository = (function () {
   // modal function
   function showModal(item) {
     pokemonRepository.loadDetails(item).then(function() {
-    let modalBody = $('.modal-body');
-    let modalTitle = $('.modal-title');
+    const modalBody = $('.modal-body');
+    const modalTitle = $('.modal-title');
 
     //clear all modal content
     modalBody.empty();
     modalTitle.empty();
 
-    let pokemonTypes = $('<p>' + 'Types: ' + item.types + '</p>');
+    const pokemonTypes = $('<p>' + 'Types: ' + item.types + '</p>');
 
     //pokemon abilities
-    let pokemonAbilities = $('<p>' + 'Abilities: ' + item.abilities + '</p>');
+    const pokemonAbilities = $('<p>' + 'Abilities: ' + item.abilities + '</p>');
 
     //Pokemon height
-    let pokemonHeight = $('<p>' + 'Height: ' + item.height + 'm' + '</p>');
+    const pokemonHeight = $('<p>' + 'Height: ' + item.height + 'm' + '</p>');
 
     //pokemon image front
-    let pokemonImageFront = $('<img class="modal-img" style="width:20%" alt="Sprite Front">');
+    const pokemonImageFront = $('<img class="modal-img" style="width:20%" alt="Sprite Front">');
     pokemonImageFront.attr('src', item.imageUrl);
 
     //pokemon image back
-    let pokemonImageBack = $('<img class="modal-img" style="width:20%" alt="Sprite Back">');
+    const pokemonImageBack = $('<img class="modal-img" style="width:20%" alt="Sprite Back">');
     pokemonImageBack.attr('src', item.imageUrlBack);
 
     //append all elements created to the modal
@@ -134,8 +134,8 @@ const pokemonRepository = (function () {
 
 //Search Bar
 searchBar.addEventListener('input', function () {
-   let listPokemon = document.querySelectorAll('li');
-   let value = searchBar.value.toUpperCase();
+   const listPokemon = document.querySelectorAll('li');
+   const value = searchBar.value.toUpperCase();
 
    listPokemon.forEach(function (pokemon) {
      if (pokemon.innerText.toUpperCase().indexOf(value) > -1) {
