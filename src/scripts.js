@@ -74,12 +74,14 @@ const pokemonRepository = (function () {
       //pokemon types
       item.types = [];
       for (var i=0; i < details.types.length; i++) {
-        item.types.push(details.types[i].type.name);
+        const pokeTypes = details.types[i].type.name;
+        item.types.push(pokeTypes);
       }
       //pokemon abilities
       item.abilities = [];
       for (var i=0; i < details.abilities.length; i++) {
-        item.abilities.push(details.abilities[i].ability.name);
+        const pokeAbilities = details.abilities[i].ability.name
+        item.abilities.push(pokeAbilites);
       }
 
     }).catch(function (e) {
